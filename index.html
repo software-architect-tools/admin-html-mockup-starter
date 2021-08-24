@@ -1,51 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>siderbar</title>
+	<title>Mockup</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style2.css">
+
 </head>
+
 <body>
-	<div class="sidebar">
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Services</a></li>
-			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-		<button class="sidebarBtn">
-			<span></span>
-		</button>
-	</div>
 
-
-		
-		<div class="click_class" style="text-align: center; margin-top: 50px;">
-			<h2 >Left side floating menu</h2>
+	<div class="row">
+		<div class="column1">
+			<br>
+			<div class="sidebar active">
+				<ul class="menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Simple Form</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
 		</div>
+		<div class="column2">
 
+			<div id="mainContent">
+			</div>
+		</div>
+	</div>
 
 	<!-- js files -->
 	<script src="jquery-3.3.1.min.js"></script>
 	<script>
-		$(document).ready(function(){
-			$('.sidebarBtn').click(function(){
-				$('.sidebar').toggleClass('active');
-				$('.sidebarBtn').toggleClass('togglee');
+		$(document).ready(function() {
+			$('ul.menu li').click(function(e) {
+				var id = $(this).text().toLowerCase().replace(/\s+/, "_");
+				document.getElementById("mainContent").innerHTML = `<object type="text/html" style="width: -moz-available;padding: 20px;" data="pages/${id}.html" ></object>`;
 			});
-
-
-			// $(".click_class h2").dblclick(function(){
-			// 	$('.hello p').addClass("redd");
-
-			// });
-			// $(".click_class h3").click(function(){
-			// 	$('.hello p').removeClass("redd");
-
-			// });
-
 		});
 	</script>
 </body>
+
 </html>
