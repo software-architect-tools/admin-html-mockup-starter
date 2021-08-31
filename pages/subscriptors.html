@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    input[type=text],
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+
+
+<h1>Create new Subcribtor</h1>
+
+<body>
+  <form>
+
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Descripction</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your Descripction..">
+
+    <h3>Http Configurations</h3>
+    <label for="country">Api Type</label>
+    <select id="country" name="country">
+      <option title="create, read, update and delete actions respect the http methods" value="australia">Restfull</option>
+      <option title="Enter relationship between crud actions and http methods" value="canada">Hybrid</option>
+    </select>
+
+    <label for="country">Security Type</label>
+    <select id="country" name="country">
+      <option value="australia">Infinite ApiKey Header</option>
+      <option value="australia">Infinite ApiKey Query Parameter</option>
+      <option value="canada">Oauth2</option>
+      <option value="canada">Hybrid Token</option>
+      <option value="canada">Public</option>
+    </select>
+
+    <label for="fname">Url</label>
+    <input type="text" id="fname" name="firstname" placeholder="https://acme.api/v1/crm/course">
+
+    <label for="fname">Headers</label>
+    <br>
+    <br>
+    <table>
+      <tr>
+        <th>Key</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>content-type</td>
+        <td>application/json</td>
+      </tr>
+      <tr>
+        <td>accept</td>
+        <td>*/*</td>
+      </tr>
+    </table>
+
+    <input type="submit" value="Submit">
+  </form>
+
+
+  <h2>Subcribtors</h2>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Security</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td>Any Data Event (*)</td>
+      <td>https://data-factory-api.com/v1/entity</td>
+      <td>Oauth2</td>
+      <td>Restfull</td>
+    </tr>
+    <tr>
+      <td>Generate student card</td>
+      <td>https://student-api.com/v1/car-generator</td>
+      <td>Infinite ApiKey Query Parameter</td>
+      <td>Restfull</td>
+    </tr>
+    <tr>
+      <td>CRM endpoint 1</td>
+      <td>https://crm-api.com/v1/endpoint</td>
+      <td>Infinite ApiKey Query Parameter</td>
+      <td>Restfull</td>
+    </tr>
+    <tr>
+      <td>External System 2</td>
+      <td>https://ext-api.com/v1/system</td>
+      <td>Oauth2</td>
+      <td>Restfull</td>
+    </tr>
+    <tr>
+      <td>ERP endpoint</td>
+      <td>https://erp-api.com/v1/validate</td>
+      <td>Public</td>
+      <td>Restfull</td>
+    </tr>
+    <tr>
+      <td>SAP endpoint1</td>
+      <td>https://sap-api.com/v1/register</td>
+      <td>Infinite ApiKey Query Parameter</td>
+      <td>Restfull</td>
+    </tr>
+    <tr>
+      <td>Canvas New Room</td>
+      <td>https://canvas-api.com/v1/register</td>
+      <td>Public</td>
+      <td>Restfull</td>
+    </tr>
+    <tr>
+      <td>Zoom New Meeting</td>
+      <td>https://zoom-api.com/v1/register</td>
+      <td>Public</td>
+      <td>Restfull</td>
+    </tr>
+    <tr>
+      <td>Notify Social Networks</td>
+      <td>https://social-api.com/v1/facebook</td>
+      <td>Infinite ApiKey Header</td>
+      <td>Restfull</td>
+    </tr>
+    <tr>
+      <td>Notify Mail</td>
+      <td>https://notify-api.com/v1/mail</td>
+      <td>Hybrid</td>
+      <td>Restfull</td>
+    </tr>
+  </table>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+      // var height = document.getElementsByTagName("html")[0].scrollHeight;
+      var body = document.body,
+          html = document.documentElement;
+
+      var height = Math.max( body.scrollHeight, body.offsetHeight,
+                             html.clientHeight, html.scrollHeight, html.offsetHeight );
+      window.parent.postMessage(["setHeight", height], "*");
+    });
+  </script>
+</body>
+
+</html>

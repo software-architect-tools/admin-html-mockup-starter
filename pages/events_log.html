@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
+  body {
+    font-family: Arial;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 21px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+
+  form.example button:hover {
+    background: #0b7dda;
+  }
+
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+</style>
+
+<h1>Events Log</h1>
+
+<form class="example" action="/action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Entity</th>
+    <th>Date</th>
+    <th>Action</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>5e13669aba70</td>
+    <td>Student</td>
+    <td>2021-20-15 10:00:05</td>
+    <td>Delete</td>
+    <td>Not-processed</td>
+  </tr>
+  <tr>
+    <td>d075ead0f535</td>
+    <td>Payment</td>
+    <td>2021-20-15 13:00:05</td>
+    <td>New</td>
+    <td>Processed</td>
+  </tr>
+  <tr>
+    <td>7b6756f229ce</td>
+    <td>Tesis</td>
+    <td>2021-20-15 13:00:05</td>
+    <td>New</td>
+    <td>Error</td>
+  </tr>
+  <tr>
+    <td>9fa761236a2f</td>
+    <td>Book</td>
+    <td>2021-20-15 13:20:00</td>
+    <td>Update</td>
+    <td>Not-processed</td>
+  </tr>
+  <tr>
+    <td>6a8b44c42a82</td>
+    <td>Teacher</td>
+    <td>2021-20-15 13:50:03</td>
+    <td>New</td>
+    <td>Processed</td>
+  </tr>
+</table>

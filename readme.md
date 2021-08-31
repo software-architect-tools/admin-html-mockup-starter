@@ -29,5 +29,6 @@ Simple mockup starter for developers which feel more comfortable with html inste
 
 # Coming soon
 
+- dynamic resize with css or js
 - Add nodejs for server deployments
 - Add palette components like: http://quickmocup-v2-demo.herokuapp.com/

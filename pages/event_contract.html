@@ -1,0 +1,138 @@
+<style>
+  input[type=text],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+</style>
+
+<h1>Event contract</h1>
+
+<form>
+
+  <label for="country">When this happens...</label>
+  <select id="country" name="country">
+    <option value="australia">Select</option>
+    <option value="australia">Any Data Event (*)</option>
+    <option value="australia">Student</option>
+    <option value="canada">Payment</option>
+    <option value="usa">Teacher</option>
+    <option value="usa">Enrollment</option>
+    <option value="usa">Course</option>
+    <option value="usa">Examen corregido</option>
+  </select>
+
+  <label for="country">And this action</label>
+  <select id="country" name="country">
+    <option value="australia">Select</option>
+    <option value="usa">any action (*)</option>
+    <option value="usa">new</option>
+    <option value="usa">update</option>
+    <option value="usa">delete</option>
+  </select>
+
+  <label for="country">Then do this...</label>
+  <select id="country" name="country">
+    <option value="australia">Select</option>
+    <option value="australia">Data Factory Api</option>
+    <option value="australia">CRM endpoint 1</option>
+    <option value="canada">External System 2</option>
+    <option value="usa">ERP endpoint</option>
+    <option value="usa">SAP endpoint1</option>
+    <option value="usa">Card Generator</option>
+    <option value="usa">Notify Social Networks</option>
+    <option value="usa">Notify Mail</option>
+    <option value="usa">Mobile Push Notification</option>
+  </select>
+
+  <input type="submit" value="Submit">
+</form>
+
+
+<h2>Event Contracts</h2>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Action</th>
+    <th>Subcriptor</th>
+  </tr>
+  <tr>
+    <td>Any Data Event (*)</td>
+    <td>Any Actiont (*)</td>
+    <td>Data Factory Api</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>New</td>
+    <td>Card Generator</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>New</td>
+    <td>Welcome by mail notification</td>
+  </tr>
+  <tr>
+    <td>Payment</td>
+    <td>Anulado</td>
+    <td>ERP endpoint</td>
+  </tr>
+  <tr>
+    <td>User Staff</td>
+    <td>Delete</td>
+    <td>RRHH endpoint delete user</td>
+  </tr>
+  <tr>
+    <td>Enrollment</td>
+    <td>Update</td>
+    <td>SAP endpoint1</td>
+  </tr>
+  <tr>
+    <td>Examen Corregido</td>
+    <td>New</td>
+    <td>Mobile Push Notification</td>
+  </tr>
+</table>

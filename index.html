@@ -5,11 +5,24 @@
 	<meta charset="UTF-8">
 	<title>Mockup</title>
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="style2.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script type="text/javascript">
+		window.addEventListener('message', function(e) {
+			var $iframe = jQuery("#myIframe");
+			var eventName = e.data[0];
+			var data = e.data[1];
+			switch (eventName) {
+				case 'setHeight':
+					$iframe.height(new Number(data)+200);
+					break;
+			}
+		}, false);
+	</script>
 
 </head>
 
-<body>
+<body >
 
 	<div class="row">
 		<div class="column1">
@@ -17,27 +30,28 @@
 			<div class="sidebar active">
 				<ul class="menu">
 					<li><a href="#">Home</a></li>
-					<li><a href="#">Simple Form</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#">Event Types</a></li>
+					<li><a href="#">Subscriptors</a></li>
+					<li><a href="#">Event Contract</a></li>
+					<li><a href="#">Events Log</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="column2">
+		<div class="column2" style="padding-left: 260px;">
 
-			<div id="mainContent">
+			<div id="mainContent" style="height:1500px; overflow-y: auto;">
 			</div>
 		</div>
 	</div>
 
 	<!-- js files -->
-	<script src="jquery-3.3.1.min.js"></script>
+	<!-- <script src="jquery-3.3.1.min.js"></script> -->
 	<script>
 		$(document).ready(function() {
 			$('ul.menu li').click(function(e) {
-				var id = $(this).text().toLowerCase().replace(/\s+/, "_");
-				document.getElementById("mainContent").innerHTML = `<object type="text/html" style="width: -moz-available;padding: 20px;" data="pages/${id}.html" ></object>`;
+				var id = $(this).text().toLowerCase().replace(/\s+/g, "_");
+				// document.getElementById("mainContent").innerHTML = `<object type="text/html" style="width: -moz-available;padding: 20px;height: inherit;" data="pages/${id}.html" ></object>`;
+				document.getElementById("mainContent").innerHTML = `<iframe id="myIframe" frameBorder="0" src="pages/${id}.html" style="width:90%;height: 2200px;"></iframe> `;
 			});
 		});
 	</script>
